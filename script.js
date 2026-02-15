@@ -12,28 +12,25 @@ const topics = [
         id: "sport",
         title: "SPORT",
         icon: "⚽",
-        description: "Bessere Infrastruktur und mehr Unterstützung für Forchheims Sportler",
+        description: "Bessere Infrastruktur für Forchheims Sportler",
         points: [
-            "Sanierung und Modernisierung der Sportinsel",
-            "Ausbau von Bolzplätzen und Basketballfeldern",
-            "Neue Calisthenics-Anlagen für Fitness und Training",
+            "Modernisierung der Sportinsel",
+            "Sanierung und Pflege von Bolzplätzen und Basketballfeldern",
+            "Neue Outdoor Calisthenics-Anlagen für Fitness und Training",
             "Erhöhung der Hallenkapazitäten für Vereinstraining",
             "Erhalt und Sanierung des Königsbads",
-            "Bessere Unterstützung für Sportvereine wie den 1. FC Burk"
         ]
     },
     {
         id: "kultur-jugend",
         title: "KULTUR & JUGEND",
         icon: "🎭",
-        description: "Mehr Raum für kreative Entfaltung und Jugendbeteiligung",
+        description: "Attraktive Veranstaltungen und Treffpunkte für junge Menschen",
         points: [
             "Mehr Feiermöglichkeiten für Jugend und junge Erwachsene",
             "Ausbau des Festplatzes Burk für Events und Veranstaltungen",
             "Proberäume für Musikvereine und lokale Künstler",
-            "Unterstützung für Veranstaltungen wie FOstival und VERTIGO Nights",
-            "Mehr Raum für Newcomer und lokale Künstler",
-            "Kulturelle Vielfalt und Integration fördern"
+            "Unterstützung von Veranstaltungen für Jugendliche und junge Erwachsene",
         ]
     },
     {
@@ -44,10 +41,8 @@ const topics = [
         points: [
             "Mehr digitale Bürgerdienste und Online-Verwaltung",
             "Entschlackung und Digitalisierung der Stadtverwaltung",
-            "Kostenfreies öffentliches WLAN in der gesamten Stadt",
+            "Potential von KI und Automatisierung für städtische Leistungen untersuchen",
             "Smart-City-Projekte für effizientere Stadtentwicklung",
-            "Künstliche Intelligenz für bessere Bürgerdienste nutzen",
-            "Digitale Kompetenzen für alle Altersgruppen fördern"
         ]
     },
     {
@@ -59,39 +54,10 @@ const topics = [
             "Start-Up Inkubator und Co-Working Spaces",
             "Hackathons und Innovationsprojekte fördern",
             "Investitionsfreundliche Kommunalpolitik",
-            "Senkung des Gewerbesteuerhebesatzes",
-            "Erweiterung der Gewerbegebiete",
             "Realisierung von Azubi- und Studentenwohnheimen"
         ]
     },
-    {
-        id: "nachhaltigkeit",
-        title: "NACHHALTIGKEIT",
-        icon: "🌱",
-        description: "Grüne Zukunft für Forchheim – Klimaschutz und Umweltbewusstsein",
-        points: [
-            "Ausbau von Rad- und Fußwegen",
-            "Mehr Grünflächen und Urban Gardening",
-            "Erneuerbare Energien für städtische Gebäude",
-            "Nachhaltige Beschaffung in der Stadtverwaltung",
-            "Umweltbildung in Schulen und Kitas",
-            "Förderung von Elektromobilität und ÖPNV"
-        ]
-    },
-    {
-        id: "jugend",
-        title: "JUGEND & BETEILIGUNG",
-        icon: "🚀",
-        description: "Mehr Mitsprache für junge Menschen in Forchheim",
-        points: [
-            "Jugendrat mit echten Mitspracherechten",
-            "Mehr Freizeitangebote und Treffpunkte für Jugendliche",
-            "Bezahlbarer Wohnraum für junge Menschen",
-            "Unterstützung für Startups und junge Unternehmer",
-            "Mentorship-Programme und Karriere-Workshops",
-            "Bessere Chancen für alle Kinder und Jugendlichen"
-        ]
-    }
+
 ];
 
 // ========================================
