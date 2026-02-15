@@ -12,25 +12,30 @@ const topics = [
         id: "sport",
         title: "SPORT",
         icon: "⚽",
-        description: "Bessere Infrastruktur für Forchheims Sportler",
+        description: "Bessere Infrastruktur und mehr Unterstützung für Forchheims Sportler",
+        expertise: "Spieler, Jugendtrainer & Schiedsrichter für den 1. FC Burk",
         points: [
-            "Modernisierung der Sportinsel",
-            "Sanierung und Pflege von Bolzplätzen und Basketballfeldern",
-            "Neue Outdoor Calisthenics-Anlagen für Fitness und Training",
+            "Sanierung und Modernisierung der Sportinsel",
+            "Ausbau von Bolzplätzen und Basketballfeldern",
+            "Neue Calisthenics-Anlagen für Fitness und Training",
             "Erhöhung der Hallenkapazitäten für Vereinstraining",
             "Erhalt und Sanierung des Königsbads",
+            "Bessere Unterstützung für Sportvereine wie den 1. FC Burk"
         ]
     },
     {
         id: "kultur-jugend",
         title: "KULTUR & JUGEND",
         icon: "🎭",
-        description: "Attraktive Veranstaltungen und Treffpunkte für junge Menschen",
+        description: "Mehr Raum für kreative Entfaltung und Jugendbeteiligung",
+        expertise: "1. Vorsitzender & Kassenwart Kulturverein STOW301 e.V., Organisation Jugendfestival FOstival, Partyreihe VERTIGO Nights und Newcomerevent Fachwerkfestival",
         points: [
             "Mehr Feiermöglichkeiten für Jugend und junge Erwachsene",
             "Ausbau des Festplatzes Burk für Events und Veranstaltungen",
             "Proberäume für Musikvereine und lokale Künstler",
-            "Unterstützung von Veranstaltungen für Jugendliche und junge Erwachsene",
+            "Unterstützung für Veranstaltungen wie FOstival und VERTIGO Nights",
+            "Mehr Raum für Newcomer und lokale Künstler",
+            "Kulturelle Vielfalt und Integration fördern"
         ]
     },
     {
@@ -38,11 +43,14 @@ const topics = [
         title: "DIGITALISIERUNG",
         icon: "💻",
         description: "Moderne Technologie für eine zukunftsfähige Stadt",
+        expertise: "Studium Wirtschaftsinformatik (M.Sc.), Wissenschaftlicher Mitarbeiter / Forscher Künstliche Intelligenz (KI) in Wirtschaft und Gesellschaft",
         points: [
             "Mehr digitale Bürgerdienste und Online-Verwaltung",
             "Entschlackung und Digitalisierung der Stadtverwaltung",
-            "Potential von KI und Automatisierung für städtische Leistungen untersuchen",
+            "Kostenfreies öffentliches WLAN in der gesamten Stadt",
             "Smart-City-Projekte für effizientere Stadtentwicklung",
+            "Künstliche Intelligenz für bessere Bürgerdienste nutzen",
+            "Digitale Kompetenzen für alle Altersgruppen fördern"
         ]
     },
     {
@@ -50,14 +58,44 @@ const topics = [
         title: "WIRTSCHAFT & JOBS",
         icon: "💼",
         description: "Starke Wirtschaft und gute Arbeitsplätze in Forchheim",
+        expertise: "Studierter Wirtschaftswissenschaftler (B.A.) + 4 Jahre Praxiserfahrung in Industriekonzern",
         points: [
             "Start-Up Inkubator und Co-Working Spaces",
             "Hackathons und Innovationsprojekte fördern",
             "Investitionsfreundliche Kommunalpolitik",
+            "Senkung des Gewerbesteuerhebesatzes",
+            "Erweiterung der Gewerbegebiete",
             "Realisierung von Azubi- und Studentenwohnheimen"
         ]
     },
-
+    {
+        id: "nachhaltigkeit",
+        title: "NACHHALTIGKEIT",
+        icon: "🌱",
+        description: "Grüne Zukunft für Forchheim – Klimaschutz und Umweltbewusstsein",
+        points: [
+            "Ausbau von Rad- und Fußwegen",
+            "Mehr Grünflächen und Urban Gardening",
+            "Erneuerbare Energien für städtische Gebäude",
+            "Nachhaltige Beschaffung in der Stadtverwaltung",
+            "Umweltbildung in Schulen und Kitas",
+            "Förderung von Elektromobilität und ÖPNV"
+        ]
+    },
+    {
+        id: "jugend",
+        title: "JUGEND & BETEILIGUNG",
+        icon: "🚀",
+        description: "Mehr Mitsprache für junge Menschen in Forchheim",
+        points: [
+            "Jugendrat mit echten Mitspracherechten",
+            "Mehr Freizeitangebote und Treffpunkte für Jugendliche",
+            "Bezahlbarer Wohnraum für junge Menschen",
+            "Unterstützung für Startups und junge Unternehmer",
+            "Mentorship-Programme und Karriere-Workshops",
+            "Bessere Chancen für alle Kinder und Jugendlichen"
+        ]
+    }
 ];
 
 // ========================================
@@ -81,6 +119,12 @@ function renderTopics() {
                     <p class="detailed-topic-description">${topic.description}</p>
                 </div>
             </div>
+            ${topic.expertise ? `
+            <div class="expertise-box">
+                <div class="expertise-label">💡 MEINE KOMPETENZ</div>
+                <p class="expertise-text">${topic.expertise}</p>
+            </div>
+            ` : ''}
             <div class="topic-divider"></div>
             <ul class="topic-points">
                 ${topic.points.map(point => `<li>${point}</li>`).join('')}
@@ -122,6 +166,30 @@ function setupSmoothScroll() {
 }
 
 /**
+ * Scroll-Position speichern und wiederherstellen
+ */
+function setupScrollBehavior() {
+    // Beim Laden: Scroll zu Top
+    window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+    });
+    
+    // Bei Link-Klicks: Scroll zu Top
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            // Nur externe Links oder neue Seiten
+            if (this.hostname !== window.location.hostname || 
+                this.pathname !== window.location.pathname) {
+                // Scroll wird nach dem Laden der neuen Seite ausgeführt
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 50);
+            }
+        });
+    });
+}
+
+/**
  * Intersection Observer für Animations-Trigger
  */
 function setupIntersectionObserver() {
@@ -156,6 +224,9 @@ function setupMobileMenu() {
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Scroll zu Top
+    window.scrollTo(0, 0);
+    
     // Themen rendern
     renderTopics();
     
@@ -165,6 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scroll
     setupSmoothScroll();
     
+    // Scroll Behavior
+    setupScrollBehavior();
+    
     // Intersection Observer
     setupIntersectionObserver();
     
@@ -172,23 +246,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     
     console.log('✓ Website initialisiert');
-});
-
-// ========================================
-// UTILITY FUNKTIONEN
-// ========================================
-
-/**
- * Scroll-Position speichern und wiederherstellen
- */
-window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem('scrollPosition', window.scrollY);
-});
-
-window.addEventListener('load', () => {
-    const scrollPosition = sessionStorage.getItem('scrollPosition');
-    if (scrollPosition) {
-        window.scrollTo(0, parseInt(scrollPosition));
-        sessionStorage.removeItem('scrollPosition');
-    }
 });
