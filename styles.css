@@ -701,3 +701,88 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 }
+
+
+/* ========================================
+   PORTRAIT IMAGE STYLING
+   ======================================== */
+
+.portrait-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid var(--light);
+    display: block;
+    aspect-ratio: 1;
+}
+
+/* ========================================
+   LEGAL PAGES (Impressum & Datenschutz)
+   ======================================== */
+
+.legal-section {
+    padding: 4rem 0;
+    background-color: var(--light);
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-content h2 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+}
+
+.legal-content h3 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content h4 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.legal-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.legal-content a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.legal-content a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.social-handle {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 0.25rem;
+}

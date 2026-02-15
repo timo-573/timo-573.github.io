@@ -9,16 +9,59 @@
 
 const topics = [
     {
+        id: "sport",
+        title: "SPORT",
+        icon: "⚽",
+        description: "Bessere Infrastruktur und mehr Unterstützung für Forchheims Sportler",
+        points: [
+            "Sanierung und Modernisierung der Sportinsel",
+            "Ausbau von Bolzplätzen und Basketballfeldern",
+            "Neue Calisthenics-Anlagen für Fitness und Training",
+            "Erhöhung der Hallenkapazitäten für Vereinstraining",
+            "Erhalt und Sanierung des Königsbads",
+            "Bessere Unterstützung für Sportvereine wie den 1. FC Burk"
+        ]
+    },
+    {
+        id: "kultur-jugend",
+        title: "KULTUR & JUGEND",
+        icon: "🎭",
+        description: "Mehr Raum für kreative Entfaltung und Jugendbeteiligung",
+        points: [
+            "Mehr Feiermöglichkeiten für Jugend und junge Erwachsene",
+            "Ausbau des Festplatzes Burk für Events und Veranstaltungen",
+            "Proberäume für Musikvereine und lokale Künstler",
+            "Unterstützung für Veranstaltungen wie FOstival und VERTIGO Nights",
+            "Mehr Raum für Newcomer und lokale Künstler",
+            "Kulturelle Vielfalt und Integration fördern"
+        ]
+    },
+    {
         id: "digitalisierung",
         title: "DIGITALISIERUNG",
         icon: "💻",
-        description: "Forchheim braucht eine moderne digitale Infrastruktur für die Zukunft",
+        description: "Moderne Technologie für eine zukunftsfähige Stadt",
         points: [
+            "Mehr digitale Bürgerdienste und Online-Verwaltung",
+            "Entschlackung und Digitalisierung der Stadtverwaltung",
             "Kostenfreies öffentliches WLAN in der gesamten Stadt",
-            "Digitale Verwaltung: Online-Anträge und E-Services",
             "Smart-City-Projekte für effizientere Stadtentwicklung",
-            "Digitale Kompetenzen für alle Altersgruppen fördern",
-            "Cybersecurity und Datenschutz als Priorität"
+            "Künstliche Intelligenz für bessere Bürgerdienste nutzen",
+            "Digitale Kompetenzen für alle Altersgruppen fördern"
+        ]
+    },
+    {
+        id: "wirtschaft",
+        title: "WIRTSCHAFT & JOBS",
+        icon: "💼",
+        description: "Starke Wirtschaft und gute Arbeitsplätze in Forchheim",
+        points: [
+            "Start-Up Inkubator und Co-Working Spaces",
+            "Hackathons und Innovationsprojekte fördern",
+            "Investitionsfreundliche Kommunalpolitik",
+            "Senkung des Gewerbesteuerhebesatzes",
+            "Erweiterung der Gewerbegebiete",
+            "Realisierung von Azubi- und Studentenwohnheimen"
         ]
     },
     {
@@ -31,7 +74,8 @@ const topics = [
             "Mehr Grünflächen und Urban Gardening",
             "Erneuerbare Energien für städtische Gebäude",
             "Nachhaltige Beschaffung in der Stadtverwaltung",
-            "Umweltbildung in Schulen und Kitas"
+            "Umweltbildung in Schulen und Kitas",
+            "Förderung von Elektromobilität und ÖPNV"
         ]
     },
     {
@@ -44,46 +88,8 @@ const topics = [
             "Mehr Freizeitangebote und Treffpunkte für Jugendliche",
             "Bezahlbarer Wohnraum für junge Menschen",
             "Unterstützung für Startups und junge Unternehmer",
-            "Mentorship-Programme und Karriere-Workshops"
-        ]
-    },
-    {
-        id: "bildung",
-        title: "BILDUNG & ZUKUNFT",
-        icon: "📚",
-        description: "Beste Chancen für alle Kinder und Jugendlichen",
-        points: [
-            "Moderne Schulausstattung und digitale Lernmittel",
-            "Mehr Lehrkräfte und kleinere Klassen",
-            "Berufsorienterung und Praktikumsmöglichkeiten",
-            "Sprachförderung und Inklusion",
-            "Kostenlose Schulmahlzeiten für alle"
-        ]
-    },
-    {
-        id: "wirtschaft",
-        title: "WIRTSCHAFT & JOBS",
-        icon: "💼",
-        description: "Starke Wirtschaft und gute Arbeitsplätze in Forchheim",
-        points: [
-            "Unterstützung für lokale Unternehmen und Handwerk",
-            "Gründerzentrum für innovative Startups",
-            "Fachkräfteentwicklung und Umschulung",
-            "Attraktive Arbeitsbedingungen und faire Löhne",
-            "Zusammenarbeit mit regionalen Partnern"
-        ]
-    },
-    {
-        id: "kultur",
-        title: "KULTUR & GESELLSCHAFT",
-        icon: "🎭",
-        description: "Lebendige Kultur und starker Zusammenhalt in Forchheim",
-        points: [
-            "Unterstützung für Künstler und Kulturschaffende",
-            "Regelmäßige Veranstaltungen und Festivals",
-            "Kulturelle Vielfalt und Integration fördern",
-            "Historisches Erbe bewahren und modernisieren",
-            "Bürgerbeteiligung bei Kulturprojekten"
+            "Mentorship-Programme und Karriere-Workshops",
+            "Bessere Chancen für alle Kinder und Jugendlichen"
         ]
     }
 ];
