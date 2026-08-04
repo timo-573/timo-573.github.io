@@ -52,8 +52,8 @@ button { font: inherit; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 22px; margin: 36px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; list-style: none; }
 .hero-meta li::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 9px 2px 0; border-radius: 50%; background: #89928d; }
 .portrait-card { width: 240px; justify-self: end; }
-.portrait-frame { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); box-shadow: var(--shadow); }
-.portrait-frame img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; }
+.portrait-frame { overflow: hidden; aspect-ratio: 3 / 4; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); box-shadow: var(--shadow); }
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .portrait-card > p { margin: 13px 0 0; color: var(--faint); font-size: 12px; line-height: 1.45; text-align: center; }
 .status-dot { display: inline-block; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: #647d74; }
 
@@ -91,7 +91,7 @@ button { font: inherit; }
 .page-hero { padding-block: 92px 68px; border-bottom: 1px solid var(--line); }
 .about-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(50px, 8vw, 105px); }
 .about-photo { max-width: 250px; }
-.about-photo img { position: sticky; top: 104px; width: 100%; aspect-ratio: 3 / 4; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); object-fit: cover; box-shadow: var(--shadow); }
+.about-photo img { position: sticky; top: 104px; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); box-shadow: var(--shadow); }
 .prose { max-width: 740px; }
 .prose h2 { margin: 0 0 24px; color: var(--heading); font-size: 36px; font-weight: 630; letter-spacing: -.03em; }
 .prose p { color: var(--muted); font-size: 17px; }
