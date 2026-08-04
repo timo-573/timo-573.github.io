@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /impressum.html
-Disallow: /datenschutz.html
+Allow: /
+
+Sitemap: https://timomayer.de/sitemap.xml
