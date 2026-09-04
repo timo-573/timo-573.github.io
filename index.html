@@ -17,16 +17,26 @@
     .featured-carousel .shell{position:relative}
     .featured-slide{min-height:260px}
     .featured-slide[hidden]{display:none}
-    .featured-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:42px}
-    .featured-arrow{display:grid;width:36px;height:36px;place-items:center;border:1px solid var(--line-strong);border-radius:50%;background:transparent;color:var(--heading);cursor:pointer;transition:background .18s ease,border-color .18s ease,transform .18s ease}
-    .featured-arrow:hover{background:var(--surface);border-color:#aeb4b0;transform:translateY(-1px)}
-    .featured-dots{display:flex;align-items:center;gap:8px}
-    .featured-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#b8bdb9;cursor:pointer;transition:width .18s ease,background .18s ease}
-    .featured-dot.is-active{width:22px;border-radius:999px;background:var(--accent)}
-    @media(max-width:900px){.featured-slide{min-height:0}.featured-controls{margin-top:32px}}
+    .featured-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:38px}
+    .featured-arrow{display:grid;width:42px;height:42px;flex:0 0 42px;place-items:center;border:1px solid var(--line-strong);border-radius:50%;background:var(--surface);color:var(--heading);font-size:18px;line-height:1;cursor:pointer;box-shadow:var(--shadow);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .featured-arrow:active{transform:scale(.96)}
+    .featured-dots{display:flex;align-items:center;justify-content:center;gap:9px;min-width:74px}
+    .featured-dot{width:9px;height:9px;min-width:9px;padding:0;border:0;border-radius:50%;background:#b8bdb9;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .featured-dot.is-active{width:24px;border-radius:999px;background:var(--accent)}
+    @media(max-width:900px){
+      .featured-slide{min-height:0}
+      .featured-controls{margin-top:28px;gap:14px}
+      .featured-arrow{width:44px;height:44px;flex-basis:44px}
+    }
+    @media(max-width:640px){
+      .featured-carousel{overflow:hidden}
+      .featured-controls{justify-content:space-between;width:100%;margin-top:26px}
+      .featured-dots{flex:1}
+      .featured-arrow{width:46px;height:46px;flex-basis:46px;font-size:20px}
+    }
     @media(prefers-reduced-motion:reduce){.featured-arrow,.featured-dot{transition:none}}
   </style>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260904b" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -69,13 +79,13 @@
           </div>
         </div>
         <div class="featured-controls" aria-label="Featured publication controls">
-          <button class="featured-arrow" type="button" data-featured-prev aria-label="Previous publication">←</button>
-          <div class="featured-dots" role="tablist" aria-label="Choose featured publication">
+          <button class="featured-arrow" type="button" data-featured-prev aria-label="Previous publication">‹</button>
+          <div class="featured-dots" aria-label="Choose featured publication">
             <button class="featured-dot is-active" type="button" data-featured-dot aria-label="Show publication 1" aria-selected="true"></button>
             <button class="featured-dot" type="button" data-featured-dot aria-label="Show publication 2" aria-selected="false"></button>
             <button class="featured-dot" type="button" data-featured-dot aria-label="Show publication 3" aria-selected="false"></button>
           </div>
-          <button class="featured-arrow" type="button" data-featured-next aria-label="Next publication">→</button>
+          <button class="featured-arrow" type="button" data-featured-next aria-label="Next publication">›</button>
         </div>
       </div>
     </section>
