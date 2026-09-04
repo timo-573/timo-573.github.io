@@ -13,6 +13,19 @@
   <meta property="og:image" content="https://timomayer.de/research-talk.webp">
   <link rel="canonical" href="https://timomayer.de/">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .featured-carousel .shell{position:relative}
+    .featured-slide{min-height:260px}
+    .featured-slide[hidden]{display:none}
+    .featured-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:42px}
+    .featured-arrow{display:grid;width:36px;height:36px;place-items:center;border:1px solid var(--line-strong);border-radius:50%;background:transparent;color:var(--heading);cursor:pointer;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+    .featured-arrow:hover{background:var(--surface);border-color:#aeb4b0;transform:translateY(-1px)}
+    .featured-dots{display:flex;align-items:center;gap:8px}
+    .featured-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#b8bdb9;cursor:pointer;transition:width .18s ease,background .18s ease}
+    .featured-dot.is-active{width:22px;border-radius:999px;background:var(--accent)}
+    @media(max-width:900px){.featured-slide{min-height:0}.featured-controls{margin-top:32px}}
+    @media(prefers-reduced-motion:reduce){.featured-arrow,.featured-dot{transition:none}}
+  </style>
   <script src="script.js" defer></script>
 </head>
 <body>
